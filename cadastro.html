@@ -1,0 +1,41 @@
+    <html lang="pt-br">
+    <head>
+    <meta charset="UTF-8">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="src/style.css">
+    </head>
+    <body>
+
+    <nav class="nav">
+    <h2>Supermercado BigBom</h2>
+    <div>
+        <a href="index.html">Início</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="listagem.html">Produtos</a>
+    </div>
+    </nav>
+
+    <form id="formProduto" class="form">
+    <h2>Cadastrar Produto</h2>
+
+    <input type="text" id="nome" placeholder="Nome do produto">
+    <input type="number" id="preco" placeholder="Preço">
+
+    <select id="categoria">
+        <option value="">Categoria</option>
+        <option value="Alimentos">Alimentos</option>
+        <option value="Bebidas">Bebidas</option>
+        <option value="Limpeza">Limpeza</option>
+    </select>
+
+    <textarea id="descricao" placeholder="Descrição"></textarea>
+
+    <button type="submit">Cadastrar</button>
+    <p id="erro"></p>
+    </form>
+
+    <script src="js/storage.js"></script>
+    <script src="js/cadastro.js"></script>
+    </body>
+    </html>
+        
