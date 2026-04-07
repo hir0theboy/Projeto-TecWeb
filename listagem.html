@@ -1,37 +1,49 @@
     <!DOCTYPE html>
     <html lang="pt-br">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lista de Produtos</title>
-        <link rel="stylesheet" href="src/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" href="src/style.css">
     </head>
     <body>
-        <nav class="nav">
-    <h2>SuperMercado</h2>
-    <div>
-        <a href="index.html">Início</a>
-        <a href="cadastro.html">Cadastro</a>
-        <a href="listagem.html">Produtos</a>
-    </div>
-    </nav>
 
-    <h2 class="titulo">Lista de Produtos</h2>
+    <!-- IMAGEM TOPO -->
+    <img class="topo" src="img/corredor2.jpg" alt="corredor">
 
-    <div class="filtros">
-    <input type="text" id="busca" placeholder="Buscar produto...">
+    <!-- LISTAGEM -->
+    <section class="home-center">
+        <div class="home-box">
 
-    <select id="filtro">
-        <option value="">Todas</option>
-        <option value="Alimentos">Alimentos</option>
-        <option value="Bebidas">Bebidas</option>
-        <option value="Limpeza">Limpeza</option>
-    </select>
-    </div>
+        <h1>Produtos Cadastrados</h1>
 
-    <div id="lista" class="grid"></div>
+        <!-- BUSCA -->
+        <input type="text" id="busca" placeholder="Buscar produto...">
+
+        <!-- FILTRO -->
+        <select id="filtro">
+            <option value="">Todas categorias</option>
+            <option value="Alimentos">Alimentos</option>
+            <option value="Bebidas">Bebidas</option>
+            <option value="Limpeza">Limpeza</option>
+        </select>
+
+        <p id="contador"></p>
+        <p id="total"></p>
+
+        <!-- LISTA -->
+        <div id="lista"></div>
+
+        <div class="home-buttons">
+            <a href="index.html" class="btn">Início</a>
+            <a href="cadastro.html" class="btn">Cadastro</a>
+        </div>
+
+        </div>
+    </section>
 
     <script src="js/storage.js"></script>
     <script src="js/listagem.js"></script>
+
     </body>
     </html>

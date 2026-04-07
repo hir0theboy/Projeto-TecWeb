@@ -1,163 +1,208 @@
-            body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f4f4f4;
+                    body {
+                    margin: 0;
+                    font-family: Arial, sans-serif;
+                    background: #f4f4f4;
+                    }
+
+                    /* IMAGEM TOPO */
+                    .topo {
+                    width: 100%;
+                    height: 250px;
+                    object-fit: cover;
+                    }
+
+                    /* HOME */
+                    .home-center {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 40px 20px;
+                    }
+
+                    .home-box {
+                    text-align: center;
+                    max-width: 500px;
+                    }
+
+                    /* BOTÕES */
+                    .home-buttons {
+                    margin-top: 20px;
+                    display: flex;
+                    justify-content: center;
+                    gap: 10px;
+                    }
+
+                    .btn {
+                    background: #27ae60;
+                    color: white;
+                    padding: 10px 15px;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    }
+
+                    /* TEXTO */
+                    h1 {
+                    color: #27ae60;
+                    }
+
+                    p {
+                    font-size: 15px;
+                    }
+
+                    /* ================= CONTATO ================= */
+
+                    .contato {
+                    background: #fff;
+                    padding: 20px;
+                    }
+
+                    .contato h2 {
+                    margin-left: 20px;
+                    }
+
+                    /* LAYOUT */
+                    .contato-container {
+                    display: flex;
+                    justify-content: space-around;
+                    margin-top: 10px;
+                    flex-wrap: wrap;
+                    }
+
+                    /* FORM */
+                    .form-area {
+                    display: flex;
+                    flex-direction: column;
+                    width: 250px;
+                    gap: 8px;
+                    }
+
+                    .form-area input,
+                    .form-area textarea {
+                    padding: 10px;
+                    border: 1px solid #ccc;
+                    }
+
+                    .form-area textarea {
+                    height: 100px;
+                    }
+
+                    .form-area button {
+                    background: #2c003e;
+                    color: white;
+                    padding: 10px;
+                    border: none;
+                    cursor: pointer;
+                    }
+
+                    /* REDES */
+                    .redes {
+                    text-align: center;
+                    max-width: 250px;
+                    }
+
+                    .icons {
+                    margin-top: 10px;
+                    display: flex;
+                    gap: 15px;
+                    justify-content: center;
+                    }
+
+                    .icons img {
+                    width: 40px;
+                    cursor: pointer;
+                    }
+
+                    /* ENDEREÇO */
+                    .endereco-titulo {
+                    margin-top: 20px;
+                    }
+
+                    .endereco {
+                    font-size: 14px;
+                    }
+
+                    /* RESPONSIVO */
+                    @media (max-width: 600px) {
+                    .home-buttons {
+                        flex-direction: column;
+                    }
+
+                    .contato-container {
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 20px;
+                    }
+                    }
+
+                    /* FORM CADASTRO */
+                select {
+                padding: 10px;
+                border: 1px solid #ccc;
+                }
+
+                #erro {
+                color: red;
+                font-size: 14px;
+                }
+
+                /* campo preço com R$ */
+            .preco-container {
+            position: relative;
             }
 
-            /* IMAGEM TOPO */
-            .topo {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
+            .preco-container span {
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #555;
             }
 
-            /* HOME */
-            .home-center {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            padding: 40px 20px;
+            .preco-container input {
+            padding-left: 35px;
             }
 
-            .home-box {
-            text-align: center;
-            max-width: 500px;
-            }
-
-            /* BOTÕES */
-            .home-buttons {
-            margin-top: 20px;
-            display: flex;
-            justify-content: center;
-            gap: 10px;
-            }
-
-            .btn {
-            background: #27ae60;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            text-decoration: none;
-            }
-
-            /* TEXTO */
-            h1 {
-            color: #27ae60;
-            }
-
-            p {
-            font-size: 15px;
-            }
-
-            /* ================= CONTATO ================= */
-
-            .contato {
-            background: #fff;
-            padding: 20px;
-            }
-
-            .contato h2 {
-            margin-left: 20px;
-            }
-
-            /* LAYOUT */
-            .contato-container {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 10px;
-            flex-wrap: wrap;
-            }
-
-            /* FORM */
-            .form-area {
-            display: flex;
-            flex-direction: column;
-            width: 250px;
-            gap: 8px;
-            }
-
-            .form-area input,
-            .form-area textarea {
-            padding: 10px;
-            border: 1px solid #ccc;
-            }
-
-            .form-area textarea {
-            height: 100px;
-            }
-
-            .form-area button {
-            background: #2c003e;
-            color: white;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            }
-
-            /* REDES */
-            .redes {
-            text-align: center;
-            max-width: 250px;
-            }
-
-            .icons {
-            margin-top: 10px;
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-            }
-
-            .icons img {
-            width: 40px;
-            cursor: pointer;
-            }
-
-            /* ENDEREÇO */
-            .endereco-titulo {
-            margin-top: 20px;
-            }
-
-            .endereco {
-            font-size: 14px;
-            }
-
-            /* RESPONSIVO */
-            @media (max-width: 600px) {
-            .home-buttons {
-                flex-direction: column;
-            }
-
-            .contato-container {
-                flex-direction: column;
-                align-items: center;
-                gap: 20px;
-            }
-            }
-
-            /* FORM CADASTRO */
-        select {
+            /* LISTAGEM */
+        #busca, #filtro {
+        margin-top: 10px;
         padding: 10px;
-        border: 1px solid #ccc;
+        width: 250px;
         }
 
-        #erro {
-        color: red;
-        font-size: 14px;
+        #lista {
+        margin-top: 20px;
+        width: 100%;
         }
 
-        /* campo preço com R$ */
-    .preco-container {
-    position: relative;
+        .produto {
+        background: white;
+        padding: 15px;
+        margin-bottom: 10px;
+        border-radius: 5px;
+        text-align: left;
+        }
+
+        .produto button {
+        background: red;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        }
+
+        #contador, #total {
+    margin-top: 10px;
+    font-weight: bold;
     }
 
-    .preco-container span {
-    position: absolute;
-    left: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    color: #555;
+    .produto button {
+    margin-right: 5px;
     }
 
-    .preco-container input {
-    padding-left: 35px;
+    .produto button:first-of-type {
+    background: #f39c12; /* editar */
+    }
+
+    .produto button:last-of-type {
+    background: red; /* excluir */
     }
