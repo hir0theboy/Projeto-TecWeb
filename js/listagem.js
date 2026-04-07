@@ -79,3 +79,13 @@
     filtro.addEventListener("change", render);
 
     render();
+
+    function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+
+    localStorage.setItem(
+        "theme",
+        document.body.classList.contains("dark") ? "dark" : "light"
+    );
+}
+
