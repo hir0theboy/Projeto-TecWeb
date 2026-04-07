@@ -1,215 +1,255 @@
-            body {
-                margin: 0;
-                font-family: Arial, sans-serif;
-                background: #f4f4f4;
-            }
+:root {
+    --bg: #f4f4f4;
+    --text: #000000;
+    --card: #ffffff;
+    --primary: #27ae60;
+    --input-bg: #ffffff;
+    --border: #cccccc;
+    --secondary: #2c003e;
+    --danger: red;
+    --warning: #f39c12;
+    --muted: #555;
+}
 
-            /* IMAGEM TOPO */
-            .topo {
-                width: 100%;
-                height: 250px;
-                object-fit: cover;
-            }
+.dark {
+    --bg: #121212;
+    --text: #ffffff;
+    --card: #1e1e1e;
+    --primary: #2ecc71;
+    --input-bg: #2a2a2a;
+    --border: #444444;
+    --secondary: #bb86fc;
+    --danger: #ff6b6b;
+    --warning: #f1c40f;
+    --muted: #aaaaaa;
+}
 
-            /* HOME */
-            .home-center {
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 40px 20px;
-            }
+* {
+    transition: background 0.3s, color 0.3s, border 0.3s;
+}
+    .dark-toggle {
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    background: var(--card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1000;
+}
 
-            .home-box {
-                text-align: center;
-                max-width: 500px;
-            }
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+}
 
-            /* BOTÕES */
-            .home-buttons {
-                margin-top: 20px;
-                display: flex;
-                justify-content: center;
-                gap: 10px;
-            }
+/* IMAGEM TOPO */
+.topo {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
 
-            .btn {
-                background: #27ae60;
-                color: white;
-                padding: 10px 15px;
-                border-radius: 5px;
-                text-decoration: none;
-            }
+/* HOME */
+.home-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
 
-            /* TEXTO */
-            h1 {
-                color: #27ae60;
-            }
+.home-box {
+    text-align: center;
+    max-width: 500px;
+}
 
-            p {
-                font-size: 15px;
-            }
+/* BOTÕES */
+.home-buttons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
 
-            /* ================= CONTATO ================= */
+.btn {
+    background: var(--primary);
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+}
 
-            .contato {
-                background: #fff;
-                padding: 20px;
-            }
+/* TEXTO */
+h1 {
+    color: var(--primary);
+}
 
-            .contato h2 {
-                margin-left: 20px;
-            }
+p {
+    font-size: 15px;
+}
 
-            /* LAYOUT */
-            .contato-container {
-                display: flex;
-                justify-content: space-around;
-                margin-top: 10px;
-                flex-wrap: wrap;
-            }
+/* ================= CONTATO ================= */
 
-            /* FORM */
-            .form-area {
-                display: flex;
-                flex-direction: column;
-                width: 250px;
-                gap: 8px;
-            }
+.contato {
+    background: var(--card);
+    padding: 20px;
+}
 
-            .form-area input,
-            .form-area textarea {
-                padding: 10px;
-                border: 1px solid #ccc;
-            }
+.contato h2 {
+    margin-left: 20px;
+}
 
-            .form-area textarea {
-                height: 100px;
-            }
+/* LAYOUT */
+.contato-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+    flex-wrap: wrap;
+}
 
-            .form-area button {
-                background: #2c003e;
-                color: white;
-                padding: 10px;
-                border: none;
-                cursor: pointer;
-            }
+/* FORM */
+.form-area {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    gap: 8px;
+}
 
-            /* REDES */
-            .redes {
-                text-align: center;
-                max-width: 250px;
-            }
+.form-area input,
+.form-area textarea,
+select {
+    padding: 10px;
+    border: 1px solid var(--border);
+    background: var(--input-bg);
+    color: var(--text);
+}
 
-            .icons {
-                margin-top: 10px;
-                display: flex;
-                gap: 15px;
-                justify-content: center;
-            }
+.form-area textarea {
+    height: 100px;
+}
 
-            .icons img {
-                width: 40px;
-                cursor: pointer;
-            }
+.form-area button {
+    background: var(--secondary);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
 
-            /* ENDEREÇO */
-            .endereco-titulo {
-                margin-top: 20px;
-            }
+/* REDES */
+.redes {
+    text-align: center;
+    max-width: 250px;
+}
 
-            .endereco {
-                font-size: 14px;
-            }
+.icons {
+    margin-top: 10px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
 
-            /* RESPONSIVO */
-            @media (max-width: 600px) {
-                .home-buttons {
-                    flex-direction: column;
-                }
+.icons img {
+    width: 40px;
+    cursor: pointer;
+}
 
-                .contato-container {
-                    flex-direction: column;
-                    align-items: center;
-                    gap: 20px;
-                }
-            }
+/* ENDEREÇO */
+.endereco-titulo {
+    margin-top: 20px;
+}
 
-            /* FORM CADASTRO */
-            select {
-                padding: 10px;
-                border: 1px solid #ccc;
-                width: 100%;
-            }
+.endereco {
+    font-size: 14px;
+}
 
-            #erro {
-                color: red;
-                font-size: 14px;
-            }
+/* RESPONSIVO */
+@media (max-width: 600px) {
+    .home-buttons {
+        flex-direction: column;
+    }
 
-            /* campo preço com R$ */
-            .preco-container {
-                position: relative;
-                width: 100%;
-            }
+    .contato-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+}
 
-            .preco-container span {
-                position: absolute;
-                left: 10px;
-                top: 50%;
-                transform: translateY(-50%);
-                color: #555;
-            }
+/* ERRO */
+#erro {
+    color: var(--danger);
+    font-size: 14px;
+}
 
-            .preco-container input {
-                padding: 10px;
-                padding-left: 30px;
-                width: 100%;
-                border: 1px solid #ccc;
-                box-sizing: border-box;
-            }
+/* campo preço com R$ */
+.preco-container {
+    position: relative;
+    width: 100%;
+}
 
+.preco-container span {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--muted);
+}
 
-                        /* LISTAGEM */
-        #busca, #filtro {
-        margin-top: 10px;
-        padding: 10px;
-        width: 250px;
-        }
+.preco-container input {
+    padding: 10px;
+    padding-left: 30px;
+    width: 100%;
+    border: 1px solid var(--border);
+    background: var(--input-bg);
+    color: var(--text);
+    box-sizing: border-box;
+}
 
-        #lista {
-        margin-top: 20px;
-        width: 100%;
-        }
+/* LISTAGEM */
+#busca, #filtro {
+    margin-top: 10px;
+    padding: 10px;
+    width: 250px;
+    background: var(--input-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+}
 
-        .produto {
-        background: white;
-        padding: 15px;
-        margin-bottom: 10px;
-        border-radius: 5px;
-        text-align: left;
-        }
+#lista {
+    margin-top: 20px;
+    width: 100%;
+}
 
-        .produto button {
-        background: red;
-        color: white;
-        border: none;
-        padding: 5px 10px;
-        cursor: pointer;
-        }
+.produto {
+    background: var(--card);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    text-align: left;
+}
 
-        #contador, #total {
+.produto button {
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.produto button:first-of-type {
+    background: var(--warning); /* editar */
+}
+
+.produto button:last-of-type {
+    background: var(--danger); /* excluir */
+}
+
+#contador, #total {
     margin-top: 10px;
     font-weight: bold;
-    }
-
-    .produto button {
-    margin-right: 5px;
-    }
-
-    .produto button:first-of-type {
-    background: #f39c12; /* editar */
-    }
-
-    .produto button:last-of-type {
-    background: red; /* excluir */
-    }
+}

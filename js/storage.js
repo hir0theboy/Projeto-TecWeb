@@ -41,3 +41,13 @@
 
     localStorage.setItem("produtos", JSON.stringify(produtos));
     }
+
+    function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+
+    localStorage.setItem(
+        "theme",
+        document.body.classList.contains("dark") ? "dark" : "light"
+    );
+}
+

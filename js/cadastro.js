@@ -39,3 +39,13 @@
     form.reset();
     erro.textContent = "";
     });
+
+    function toggleDarkMode() {
+    document.body.classList.toggle("dark");
+
+    localStorage.setItem(
+        "theme",
+        document.body.classList.contains("dark") ? "dark" : "light"
+    );
+}
+
